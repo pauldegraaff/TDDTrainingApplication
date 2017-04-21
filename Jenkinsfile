@@ -4,11 +4,11 @@ node {
       // Get some code from a GitHub repository
       git 'https://github.com/codecentric/TDDTrainingApplication.git'
       // Get the Maven tool.
-      // ** NOTE: This 'M3' Maven tool must be configured
-      // **       in the global configuration.           
-      mvnHome = tool 'maven'
-      
-     env.JAVA_HOME="${tool 'JDK8'}"
+      // ** NOTE: This 'Maven 3.3.9' Maven tool must be configured
+      // **       in the global configuration.
+      mvnHome = tool 'Maven 3.3.9'
+
+     env.JAVA_HOME="${tool 'Java 8 Open JDK'}"
      env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
      sh 'java -version'
    }
